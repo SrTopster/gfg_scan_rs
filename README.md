@@ -9,3 +9,4 @@ cd target/debug
 gfg_scan.exe
 ```
 > You can add a shortcut of this executable on your startup folder so it runs on boot
+Checkout the linux version [here](https://github.com/SrTopster/gfg_scan_rs/tree/linux).
