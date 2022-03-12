@@ -8,3 +8,4 @@ cargo build
 cd target/debug
 gfg_scan.exe
 ```
+> You can add a shortcut of this executable on your startup folder so it runs on boot
