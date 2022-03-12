@@ -7,5 +7,5 @@ cargo build
 cd target/debug
 ./gfg_scan
 ```
-> You can add a shortcut of this executable on your startup folder so it runs on boot <br>
+> You can add this executable on your startup applications so it runs on boot. <br>
 Checkout the windows version [here](https://github.com/SrTopster/gfg_scan_rs/tree/master).
