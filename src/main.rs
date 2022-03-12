@@ -1,4 +1,3 @@
-#![windows_subsystem = "windows"]
 use curl::easy::Easy;
 use std::{str,thread,time};
 use std::process::Command;
@@ -7,7 +6,6 @@ use std::io::{Write,Read};
 use rss::Channel;
 use soloud::*;
 use chrono;
-use webbrowser;
 fn log(name: &str) {
     let time = chrono::offset::Local::now().format("%d-%m-%Y %H:%M:%S").to_string();
     let mut file = OpenOptions::new()
@@ -56,14 +54,10 @@ fn main() {
             output.write(title.as_bytes()).unwrap();
             log(title);
             thread::spawn(||play_sound());
-            let notify = Command::new("notifu64.exe")
-            .args(["/m","Clique para abrir no navegador.","/p",title,"/i","icon.ico"])
+            Command::new("notify-send")
+            .args([title,link,"-i","deepin-game-center","-u","critical"])
             .spawn()
-            .expect("falha a executar notifu64.exe")
-            .wait();
-            if  notify.unwrap().code().unwrap() == 3{
-                webbrowser::open(link).unwrap()
-            }
+            .expect("falha a executar notify-send");
         }
     }
     else {
