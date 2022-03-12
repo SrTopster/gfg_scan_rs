@@ -1,0 +1,11 @@
+[package]
+name = "gfg_scan"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+curl = "0.4.42"
+rss = "2.0.0"
+webbrowser = "0.6.0"
+chrono = "0.4.19"
+soloud = "1.0.2"
