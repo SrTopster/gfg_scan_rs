@@ -1,4 +1,4 @@
-//#![windows_subsystem = "windows"]
+#![windows_subsystem = "windows"]
 use curl::easy::Easy;
 use std::{str,thread,time};
 use std::process::Command;
