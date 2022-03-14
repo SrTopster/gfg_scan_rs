@@ -5,7 +5,7 @@ gfg_scan is a simple rust program that reads from Grab Free Games Steam RSS and 
 git clone -b master https://github.com/SrTopster/gfg_scan_rs.git
 cd gfg_scan_rs
 cargo build --release
-cd target/debug
+cd target/release
 gfg_scan.exe
 ```
 > You can add a shortcut of this executable on your startup folder so it runs on boot. <br>
